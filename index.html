@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Projet visant a mimer jupyter notebook">
+        <meta name="keywords" content="jupyter,notebook,jupyter notebook">
+        <meta name="author" content="Michel Junior Delanoue">
+        <title>nomFile - jupyter Notebook</title>
+        <link rel="shortcut icon" href="images/favicon-notebook.ico" type="image/x-icon">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+    <body>
+        <div id="renameBoxContainer" class="renameBox-hidden">
+            <div id="renameBox">
+                <div>
+                    <h3>Rename Notebook</h3>
+                    <button>×</button>
+                </div>
+                <hr>
+                <div>
+                    <p>
+                        Enter a new notebook name :
+                    </p>
+                    <input type="text" name="notebookName" id="notebookName">
+                </div>
+                <hr>
+                <div>
+                    <button>Cancel</button>
+                    <button>Rename</button>
+                </div>
+            </div>
+        </div>
+        <header>
+            <div id="header-top">
+                <div id="jupyterBrand-others">
+                    <a href="#"><img src="images/logo.png" alt="logo jupyter Notebook" title="dashboard"></a>
+                    <h1>notebook-title</h1>
+                    <p>Last checkpoint information</p>
+                </div>
+                <div id="pythonBrand-others">
+                    <img src="images/HTML5_Logo.svg" title="Python 3 (ipykernel)" alt="logo python programming language">
+                    <input type="button" value="Logout">
+                </div>
+            </div>
+            <hr>
+            <nav>
+                <div id="burger-icon">
+                    <img src="images/bars-solid.svg" alt="burger menu icon"> <span>Menu</span>
+                </div>
+                <ul id="nav-left">
+                        <li><a href="#">File</a>
+                            <ul class="nav-dropdown">
+                                <li class="dropdown-item"><div><a href="#">New Notebook</a><img src="images/caret-right-solid.svg" style="height: 12px;" alt="caret-right icon"></div>
+                                    <ul class="nav-sub-dropdown">
+                                        <li class="sub-dropdown-item"><a href="#">Python 3 (ipykernel)</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">Open...</a></li>
+                                <hr>
+                                <li><a href="#">Make a copy...</a></li>
+                                <li><a href="#">Save as...</a></li>
+                                <li id="renameMenuItem"><a href="#">Rename...</a></li>
+                                <li><a href="#">Save and checkpoint</a><span>Ctrl-S</span></li>
+                                <hr>
+                                <li class="dropdown-item"><div><a href="#">Revert to checkpoint</a><img src="images/caret-right-solid.svg" style="height: 12px;" alt="caret-right icon"></div>
+                                    <ul class="nav-sub-dropdown">
+                                        <li class="sub-dropdown-item"><a href="#">Lundi 1 janvier 2024 a 22:45</a></li>
+                                    </ul>
+                                </li>
+                                <hr>
+                                <li><a href="#">Print Preview</a></li>
+                                <li class="dropdown-item"><div><a href="#">Download as</a><img src="images/caret-right-solid.svg" style="height: 12px;" alt="caret-right icon"></div>
+                                    <ul class="nav-sub-dropdown">
+                                        <li class="sub-dropdown-item"><a href="#">AsciiDoc (.asciidoc)</a></li>
+                                        <li class="sub-dropdown-item"><a href="#">HTML (.html)</a></li>
+                                        <li class="sub-dropdown-item"><a href="#">LaTeX (.tex)</a></li>
+                                        <li class="sub-dropdown-item"><a href="#">Markdown (.md)</a></li>
+                                        <li class="sub-dropdown-item"><a href="#">Notebook (.ipynb)</a></li>
+                                        <li class="sub-dropdown-item"><a href="#">PDF via LaTeX (.pdf)</a></li>
+                                        <li class="sub-dropdown-item"><a href="#">reST (.rst)</a></li>
+                                        <li class="sub-dropdown-item"><a href="#">Python (.py)</a></li>
+                                        <li class="sub-dropdown-item"><a href="#">Reveal.js slides (.slides.html)</a></li>
+                                        <li class="sub-dropdown-item"><a href="#">PDF via HTML (.html)</a></li>
+                                    </ul>
+                                </li>
+                                <hr>
+                                <li><a href="#">Trust Notebook</a></li>
+                                <hr>
+                                <li><a href="#">Close and Halt</a></li>
+                            </ul>
+                        </li>
+                        <li id="menuEdit"><a href="#">Edit</a>
+                            <ul class="nav-dropdown">
+                                <li><a href="#">Cut Cells</a> <span>X</span></li>
+                                <li><a href="#">Copy Cells</a> <span>C</span></li>
+                                <li><a href="#">Paste Cells Above</a> <span>Shift-V</span></li>
+                                <li><a href="#">Paste Cells Below</a> <span>V</span></li>
+                                <li><a href="#">Paste Cells & Replace</a></li>
+                                <li><a href="#">Delete Cells</a> <div><span>D</span>,<span>D</span></div></li>
+                                <li><a href="#">Undo Delete Cells</a> <span>Z</span></li>
+                                <hr>
+                                <li><a href="#">Split Cell</a> <span>Ctrl-Shift-Minus</span></li>
+                                <li><a href="#">Merge Cell Above</a></li>
+                                <li><a href="#">Merge Cell Below</a></li>
+                                <hr>
+                                <li><a href="#">Move Cell Up</a></li>
+                                <li><a href="#">Move Cell Down</a></li>
+                                <hr>
+                                <li><a href="#">Edit Notebokk Metadata</a></li>
+                                <hr>
+                                <li><a href="#">Find and Replace</a></li>
+                                <hr>
+                                <li><a href="#">Cut Cell Attachments</a></li>
+                                <li><a href="#">Copy Cell Attachments</a></li>
+                                <li><a href="#">Paste Cell Attachments</a></li>
+                                <hr>
+                                <li><a href="#">Insert Image</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">View</a>
+                            <ul class="nav-dropdown">
+                                <li><a href="#">Toggle Header</a></li>
+                                <li><a href="#">Toggle Toolbar</a></li>
+                                <li><a href="#">Toggle Line Numbers</a> <span>Shift-L</span></li>
+                                <li class="dropdown-item"><div><a href="#">Cell Toolbar</a><img src="images/caret-right-solid.svg" style="height: 12px;" alt="caret-right icon"></div>
+                                    <ul class="nav-sub-dropdown">
+                                        <li class="sub-dropdown-item"><a href="#">None</a></li>
+                                        <li class="sub-dropdown-item"><a href="#">Edit Metadata</a></li>
+                                        <li class="sub-dropdown-item"><a href="#">Raw Cell Format</a></li>
+                                        <li class="sub-dropdown-item"><a href="#">Slideshow</a></li>
+                                        <li class="sub-dropdown-item"><a href="#">Attachments</a></li>
+                                        <li class="sub-dropdown-item"><a href="#">Tags</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li id="menuInsert"><a href="#">Insert</a>
+                            <ul class="nav-dropdown">
+                                <li><a href="#">Insert Cell Above</a> <span>A</span></li>
+                                <li><a href="#">Insert Cell Below</a> <span>B</span></li>
+                            </ul>
+                        </li>
+                        <li id="menuCell"><a href="#">Cell</a>
+                            <ul class="nav-dropdown">
+                                <li><a href="#">Run Cells</a> <span>Ctrl-Enter</span></li>
+                                <li><a href="#">Run Cells and Select Below</a> <span>Shift-Enter</span></li>
+                                <li><a href="#">Run Cells and Insert Below</a> <span>Alt-Enter</span></li>
+                                <li><a href="#">Run All</a></li>
+                                <li><a href="#">Run All Above</a></li>
+                                <li><a href="#">Run All Below</a></li>
+                                <hr>
+                                <li class="dropdown-item"><div><a href="#">Cell Type</a><img src="images/caret-right-solid.svg" style="height: 12px;" alt="caret-right icon"></div>
+                                    <ul class="nav-sub-dropdown">
+                                        <li class="sub-dropdown-item"><a href="#">Code</a> <span>Y</span></li>
+                                        <li class="sub-dropdown-item"><a href="#">Markdown</a> <span>M</span></li>
+                                        <li class="sub-dropdown-item"><a href="#">Raw NBConvert</a> <span>R</span></li>
+                                    </ul>
+                                </li>
+                                <hr>
+                                <li class="dropdown-item"><div><a href="#">Current Outputs</a><img src="images/caret-right-solid.svg" style="height: 12px;" alt="caret-right icon"></div>
+                                    <ul class="nav-sub-dropdown">
+                                        <li class="sub-dropdown-item" class="sub-dropdown-item"><a href="#">Toggle</a> <span>O</span></li>
+                                        <li class="sub-dropdown-item" class="sub-dropdown-item"><a href="#">Toggle Scrollibg</a> <span>Shift-O</span></li>
+                                        <li class="sub-dropdown-item" class="sub-dropdown-item"><a href="#">Clear</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown-item"><div><a href="#">All Output</a><img src="images/caret-right-solid.svg" style="height: 12px;" alt="caret-right icon"></div>
+                                    <ul class="nav-sub-dropdown">
+                                        <li class="sub-dropdown-item"><a href="#">Toggle</a></li>
+                                        <li class="sub-dropdown-item"><a href="#">Toggle Scrollibg</a></li>
+                                        <li class="sub-dropdown-item"><a href="#">Clear</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Kernel</a>
+                            <ul class="nav-dropdown">
+                                <li><a href="#">Interrupt</a> <div><span>I</span> , <span>I</span></div></li>
+                                <li><a href="#">Restart</a> <div><span>0</span> , <span>0</span></div></li>
+                                <li><a href="#">Restart & Clear Output</a></li>
+                                <li><a href="#">Restart & Run All</a></li>
+                                <li><a href="#">Reconnect</a></li>
+                                <li><a href="#">Shutdown</a></li>
+                                <hr>
+                                <li class="dropdown-item"><div><a href="#">Change Kernel</a><img src="images/caret-right-solid.svg" style="height: 12px;" alt="caret-right icon"></div>
+                                    <ul class="nav-sub-dropdown">
+                                        <li class="sub-dropdown-item"><a href="#">Python 3 (ipykernel)</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Widgets</a>
+                            <ul class="nav-dropdown">
+                                <li><a href="#">Save Notebook Widget State</a></li>
+                                <li><a href="#">Clear Notebook Widget State</a></li>
+                                <hr>
+                                <li><a href="#">Download Widget State</a></li>
+                                <li><a href="#">Embed Widgets</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Help</a>
+                            <ul class="nav-dropdown">
+                                <li><a href="#">User Interface Tour</a></li>
+                                <li><a href="#">Keyboard Shortcuts</a> <span>H</span></li>
+                                <li><a href="#">Edit Keyboard Shortcuts</a></li>
+                                <hr>
+                                <li><a href="https://nbviewer.org/github/ipython/ipython/blob/3.x/examples/Notebook/Index.ipynb" target="_blank">Notebook Help</a><img src="images/up-right-from-square-solid.svg" alt="external link icon" style="height: 13px;width: 13px;"></li>
+                                <li><a href="https://docs.github.com/fr/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github" target="_blank">Markdown</a><img src="images/up-right-from-square-solid.svg" alt="external link icon" style="height: 13px;width: 13px;"></li>
+                                <hr>
+                                <li><a href="https://docs.python.org/3.10/" target="_blank">Python Reference</a><img src="images/up-right-from-square-solid.svg" alt="external link icon" style="height: 13px;width: 13px;"></li>
+                                <li><a href="https://ipython.org/documentation.html?v=20240106100345" target="_blank">IPython Reference</a><img src="images/up-right-from-square-solid.svg" alt="external link icon" style="height: 13px;width: 13px;"></li>
+                                <li><a href="https://numpy.org/doc/stable/reference/?v=20240106100345" target="_blank">Numpy Reference</a><img src="images/up-right-from-square-solid.svg" alt="external link icon" style="height: 13px;width: 13px;"></li>
+                                <li><a href="https://docs.scipy.org/doc/scipy/reference/?v=20240106100345" target="_blank">SciPy Reference</a><img src="images/up-right-from-square-solid.svg" alt="external link icon" style="height: 13px;width: 13px;"></li>
+                                <li><a href="https://matplotlib.org/stable/users/index.html" target="_blank">Matplotib Reference</a><img src="images/up-right-from-square-solid.svg" alt="external link icon" style="height: 13px;width: 13px;"></li>
+                                <li><a href="https://docs.sympy.org/latest/index.html?v=20240106100345" target="_blank">SymPy Reference</a><img src="images/up-right-from-square-solid.svg" alt="external link icon" style="height: 13px;width: 13px;"></li>
+                                <li><a href="https://pandas.pydata.org/pandas-docs/stable/?v=20240106100345" target="_blank">pandas Reference</a><img src="images/up-right-from-square-solid.svg" alt="external link icon" style="height: 13px;width: 13px;"></li>
+                                <hr>
+                                <li><a href="#">About</a></li>
+                            </ul>
+                        </li>
+                </ul>
+                <div id="nav-right">
+                    <input type="button" value="Trusted">
+                    <h2>Python 3 (ipykernel) <span title="Kernel Idle"></span></h2>
+                </div>
+            </nav>
+            <div id="header-bottom">
+                <button title="Save and Chekpoint"><i class="fa fa-save"></i></button>
+                <button title="insert cell below"><i class="fa-plus fa"></i></button>
+                <div class="button-group">
+                    <button title="cut selected cells"><i class="fa-cut fa"></i></button>
+                    <button title="copy selected cells"><i class="fa-copy fa"></i></button>
+                    <button title="paste cells below"><i class="fa-paste fa"></i></button>
+                </div>
+                <div class="button-group">
+                    <button title="move selected cells up"><i class="fa-arrow-up fa"></i></button>
+                    <button title="move selected cells down"><i class="fa-arrow-down fa"></i></button>
+                </div>
+                <div class="button-group">
+                    <button title="run cell, select below"><i class="fa-play fa"></i> <span>Run</span></button>
+                    <button title="interrupt the kernel"><i class="fa-stop fa"></i></button>
+                    <button title="restart the kernel(with dialog)"><i class="fa-repeat fa"></i></button>
+                    <button title="restart the kernel, then re-run the whole notebook(with dialog)"><i class="fa-forward fa"></i></button>
+                </div>
+                <select aria-label="Nom de la cellule" name="cell_type" id="cell-type">
+                    <option value="Code">Code</option>
+                    <option value="Markdown">Markdown</option>
+                </select>
+                <button title="open the command palette"><i class="fa-keyboard-o fa"></i></button>
+            </div>
+        </header>
+        <main>
+            <div id="cell1" class="focused-cell code">
+                <div class="cell-div">
+                    <pre>In [<span class="numberOfRun"> </span>]:</pre>
+                    <div id="editor1" class ="cell-textarea"></div>
+                </div>
+            </div>
+        </main>
+        <div id="dbclToAddCell">
+            <!--Cette ajoute une nouvelle cellule a chaque double click c'est une 
+                des fonctionalites presente dans jupyter. Elle trouve juste en dessous de
+            la liste de cellule -->
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.32.3/ace.min.js" integrity="sha512-v4FCpndHUTAcQ0BeBMQMj7+JFXJYD2ABCX3wUcnWI18lKCr7DpqcaGXLUyooBbnCtTzLfsoXef40p3EaGHPRFQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script type="module" src="script/script.js"></script>
+    </body>
+</html>
